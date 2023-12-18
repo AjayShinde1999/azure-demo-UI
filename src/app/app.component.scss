@@ -36,13 +36,15 @@
 }
 
 .output-wrapper {
-  height: 70vh;
+  height: calc(70vh - 64px);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
   gap: 8px;
+  background: #ccc;
+  padding: 12px;
 
   li {
     border: 1px solid #ccc;
