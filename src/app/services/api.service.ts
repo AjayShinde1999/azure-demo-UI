@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  private baseUrl: string = 'localhost:8080/api/users';
+  private baseUrl: string = 'https://azure-demo-app-1.azurewebsites.net/api/users';
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class ApiService {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     })
-    return this.http.post(this.baseUrl, data, {
+    return this.http.post(this.baseUrl, {data: data}, {
       headers: headers
     });
   }
